@@ -24,6 +24,9 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+# turbolinks playing nicely with jquery document.ready
+gem 'jquery-turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -35,11 +38,57 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Use puma as the app server
+gem 'puma'
+
+# API Connection
+gem 'rest-client'
+gem 'uuidtools'
+
+#view helpers
+gem 'humanize_boolean'
+
+#stop loggging assets
+gem 'quiet_assets'
+
+group :development do
+  gem 'better_errors', '>=1.0.1'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  #gem 'bullet'
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'rspec-mocks'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+end
+
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+
+  #gem 'capybara-mechanize' #if we need to check external http
+  # install gem outside if used in OS X: rb-fsevent
+  # install gem outside if used in linux: rb-inotify
+
+  gem 'vcr' #also gem install this one outside bundler
+  gem 'webmock' #also gem install this one outside bundler
+  gem 'timecop'
+end
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :test, :development do
+  gem 'debase'
+  gem 'ruby-debug-ide'
+end

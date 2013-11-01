@@ -16,3 +16,8 @@
 /tmp
 
 /.idea/
+
+/.vagrant/
+
+/spec/rspec_log.txt
+/spec/vcr/*
