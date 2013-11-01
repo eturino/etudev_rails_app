@@ -1,0 +1,88 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (2.2.1)
+    bluepill (2.3.0)
+      rsyslog (>= 0.0.0)
+    build-essential (1.4.2)
+    chef_handler (1.1.4)
+    dmg (2.0.4)
+    git (2.7.0)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+    monit (0.7.1)
+    nginx (2.0.0)
+      apt (~> 2.2)
+      bluepill (~> 2.3)
+      build-essential (~> 1.4)
+      ohai (~> 1.1)
+      runit (~> 1.2)
+      yum (~> 2.3)
+    nodejs (1.3.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    npm (0.1.2)
+      nodejs (>= 0.0.0)
+    ohai (1.1.12)
+    rbenv (1.6.5)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      git (>= 0.0.0)
+      ohai (>= 1.1)
+    rsyslog (1.9.0)
+    runit (1.3.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    sqlite (1.0.0)
+    windows (1.11.0)
+      chef_handler (>= 0.0.0)
+    yum (2.3.4)
+
+GIT
+  remote: https://github.com/eturino/etudev_bash_it
+  ref: master
+  sha: 987ec4a8dbb3f675b5762e53ae989b38df354ebd
+  specs:
+    etudev_bash_it (0.1.2)
+      git (>= 0.0.0)
+
+GIT
+  remote: https://github.com/eturino/etudev_nginx
+  ref: master
+  sha: 562182d404aa9b94756237603775320fdc994d1e
+  specs:
+    etudev_nginx (0.1.0)
+      monit (>= 0.0.0)
+      nginx (>= 0.0.0)
+
+GIT
+  remote: https://github.com/eturino/etudev_ruby
+  ref: master
+  sha: 7eef4e05babe30f3cfa0ab4e72c4ecf63b79acca
+  specs:
+    etudev_ruby (0.1.1)
+      rbenv (>= 0.0.0)
+
+GIT
+  remote: https://github.com/eturino/etudev_server_ubuntu
+  ref: master
+  sha: 58aba24e39e98cbc978af51572edf1326ba98f27
+  specs:
+    etudev_server_ubuntu (0.1.0)
+      apt (>= 0.0.0)
+
+DEPENDENCIES
+  etudev_bash_it (>= 0)
+  etudev_nginx (>= 0)
+  etudev_ruby (>= 0)
+  etudev_server_ubuntu (>= 0)
+  monit (>= 0)
+  nginx (>= 0)
+  nodejs (>= 0)
+  npm (>= 0)
+  sqlite (>= 0)
+

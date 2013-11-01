@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'etudev_bash_it', :git => 'https://github.com/eturino/etudev_bash_it'
+
+cookbook 'etudev_ruby', :git => 'https://github.com/eturino/etudev_ruby'
+
+cookbook 'etudev_nginx', :git => 'https://github.com/eturino/etudev_nginx'
+
+cookbook 'etudev_server_ubuntu', :git => 'https://github.com/eturino/etudev_server_ubuntu'
+
+cookbook 'sqlite'
+cookbook 'nodejs'
+cookbook 'npm'
+
+cookbook 'nginx'
+cookbook 'monit'
